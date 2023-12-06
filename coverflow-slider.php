@@ -80,6 +80,16 @@ function get_latest_posts_swiper_slider($atts) {
             $output .= '<div id="' . esc_attr($unique_id) . '" class="swiper-slide" style="background-image:url(' . esc_url($featured_image_url) . ')">';
             $output .= '<img src="' . esc_url($featured_image_url) . '" class="entity-img" />';
             $output .= '<div class="content">';
+            
+            // Display the first category
+            $categories = get_the_category();
+            if (!empty($categories)) {
+                $output .= '<span class="category">' . esc_html($categories[0]->name) . '</span>';
+            }
+
+            // Display the post date
+            $output .= '<span class="post-date">' . get_the_date() . '</span>';
+
             $output .= '<p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7"><a href="' . esc_url(get_permalink()) . '">' . get_the_title() . '</a></p>';
             $output .= '<span class="caption" data-swiper-parallax="-20%">' . wp_trim_words(get_the_excerpt(), 20) . '</span>';
 
@@ -104,6 +114,9 @@ function get_latest_posts_swiper_slider($atts) {
 
 // Register shortcode
 add_shortcode('latest_posts_slider', 'get_latest_posts_swiper_slider');
+
+// ... (your existing code)
+
 
 
 
