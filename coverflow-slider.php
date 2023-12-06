@@ -13,7 +13,7 @@ function posts_coverflow_slider_enqueue_styles() {
     wp_enqueue_style('meyer-reset', 'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
 
     // Enqueue Swiper CSS
-    wp_enqueue_style('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css', array(), '4.0.7');
+    wp_enqueue_style('swiper-online', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css', array(), '4.0.7');
 
     // Enqueue your custom styles
     wp_enqueue_style('posts-coverflow-slider-new', plugin_dir_url(__FILE__) . 'style.css', array('swiper'), null);
