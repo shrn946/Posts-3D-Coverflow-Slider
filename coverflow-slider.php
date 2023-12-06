@@ -13,10 +13,10 @@ function posts_coverflow_slider_enqueue_styles() {
     wp_enqueue_style('meyer-reset', 'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
 
     // Enqueue Swiper CSS
-    wp_enqueue_style('swiperr', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css', array(), '4.0.7');
+    wp_enqueue_style('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css', array(), '4.0.7');
 
     // Enqueue your custom styles
-    wp_enqueue_style('posts-coverflow-slider', plugin_dir_url(__FILE__) . 'style.css', array('swiper'), null);
+    wp_enqueue_style('posts-coverflow-slider-new', plugin_dir_url(__FILE__) . 'style.css', array('swiper'), null);
 }
 
 add_action('wp_enqueue_scripts', 'posts_coverflow_slider_enqueue_styles');
@@ -34,6 +34,7 @@ function posts_coverflow_slider_enqueue_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'posts_coverflow_slider_enqueue_scripts');
+
 
 
 
@@ -116,11 +117,6 @@ function get_latest_posts_swiper_slider($atts) {
 add_shortcode('latest_posts_slider', 'get_latest_posts_swiper_slider');
 
 // ... (your existing code)
-
-
-
-
-
 
 // Function to display the settings page content
 function coverflow_post_slider_settings_page() {
