@@ -35,9 +35,6 @@ function posts_coverflow_slider_enqueue_scripts() {
 
 add_action('wp_enqueue_scripts', 'posts_coverflow_slider_enqueue_scripts');
 
-
-
-
 // Function to get latest WordPress posts and generate Swiper slider
 function get_latest_posts_swiper_slider($atts) {
     // Attributes
@@ -116,8 +113,6 @@ function get_latest_posts_swiper_slider($atts) {
 // Register shortcode
 add_shortcode('latest_posts_slider', 'get_latest_posts_swiper_slider');
 
-// ... (your existing code)
-
 // Function to display the settings page content
 function coverflow_post_slider_settings_page() {
     ?>
@@ -140,7 +135,6 @@ function coverflow_post_slider_settings_page() {
     </div>
     <?php
 }
-
 // Function to add the settings page to the admin menu
 function coverflow_post_slider_add_menu() {
     add_options_page('Coverflow Post Slider Settings', 'Coverflow Post Slider', 'manage_options', 'coverflow-post-slider-settings', 'coverflow_post_slider_settings_page');
@@ -148,4 +142,3 @@ function coverflow_post_slider_add_menu() {
 
 // Hook to add the settings page
 add_action('admin_menu', 'coverflow_post_slider_add_menu');
-
