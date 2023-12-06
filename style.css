@@ -18,6 +18,10 @@
 
 }
 
+
+.swiper-container span.category {
+    margin-right: 10px;
+}
 .swiper-container a.read-more {
     font-weight: bold;
     margin-top: 15px;
@@ -58,10 +62,16 @@
 .swiper-slide .content .title {
     font-size: 1.6em;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     line-height: 37px;
     text-transform: unset;
 }
+/* Add text shadow to category and post-date */
+.span-category,
+.span-post-date {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
+}
+
 .swiper-slide .content .title a{color:#FF6600;}
 .swiper-slide .content .title a:hover{color:#FF3300;}
 .swiper-slide .content .caption {
