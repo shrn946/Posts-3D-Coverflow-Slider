@@ -22,6 +22,8 @@
     font-weight: bold;
     margin-top: 15px;
     float: left;
+    color: #fff;
+    font-size: 16px;
 }
 .swiper-container.swiper-container-coverflow {
   padding-top: 2%;
@@ -54,14 +56,18 @@
   color: #fff;
 }
 .swiper-slide .content .title {
-  font-size: 2.6em;
-  font-weight: bold;
-  margin-bottom: 30px;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 37px;
+    text-transform: unset;
 }
+.swiper-slide .content .title a{color:#FF6600;}
+.swiper-slide .content .title a:hover{color:#FF3300;}
 .swiper-slide .content .caption {
-  display: block;
-  font-size: 13px;
-  line-height: 1.4;
+    display: block;
+    font-size: 0.8em;
+    line-height: 1.4;
 }
 
 [class^=swiper-button-] {
@@ -107,7 +113,7 @@
 @media (max-width: 1180px) {
 .swiper-slide .content {
     position: absolute;
-    top: 46%;
+    top: 15px;
     left: 0;
     width: 95%;
     padding-left: 5%;
